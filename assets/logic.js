@@ -15,7 +15,7 @@ function makeTimeblocks(hour, existingTodo = ""){
     $(".container").append($(`
     <div class="row time-block">
         <div class="hour col-1">${hour}:00</div>
-        <textarea name="" id="" cols="30" rows="3" class="description col-9 ${presentPastOrFuture}">${existingTodo}</textarea>
+        <textarea name="" id="${hour}" cols="30" rows="3" class="description col-9 ${presentPastOrFuture}">${existingTodo}</textarea>
         <div class="btn saveBtn col-2">Save</div>
     </div>`));
 
@@ -27,8 +27,23 @@ for(var i = 9; i<18; i++){
     makeTimeblocks(i);
 }
 
-// displays current time at the top
-$('#currentDay').text(moment().format('dddd, MMMM Do'));
-//still need to add click event listeners so when a block is clicked, grabs the value from that textarea, and saves it in localStorage.
+var saveBtn = document.querySelectorAll(".saveBtn")
 
-//when app first loads, need to grab all existing todos and show on the page
+//added click event listeners so when a block is clicked, grabs the value from that textarea, and saves it in localStorage.
+for (var i = 0; i < saveBtn.length; i++) {
+    saveBtn[i].addEventListener("click", saveToDo)
+}
+
+// saved to local storage
+function saveToDo(event) {
+    var toDoDescription = event.target.parentNode.children[1].value
+    var toDoTime = event.target.parentNode.children[1].id
+    localStorage.setItem(toDoTime, toDoDescription)
+}
+
+
+// displays current time at the top
+
+var displayCurrentTime = document.querySelector("#currentDay");
+displayCurrentTime.textContent = new Date()
+
