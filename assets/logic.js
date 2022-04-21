@@ -22,6 +22,7 @@ function makeTimeblocks(hour, existingTodo = ""){
     
 }
 
+// create timeblocks using forloop
 for(var i = 9; i<18; i++){
     makeTimeblocks(i);
 }
