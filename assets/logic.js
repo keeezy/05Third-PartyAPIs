@@ -27,6 +27,7 @@ for(var i = 9; i<18; i++){
     makeTimeblocks(i);
 }
 
+// set variable for savebtn functionality
 var saveBtn = document.querySelectorAll(".saveBtn")
 
 //added click event listeners so when a block is clicked, grabs the value from that textarea, and saves it in localStorage.
