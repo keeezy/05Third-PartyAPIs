@@ -12,14 +12,11 @@ To efficiently manage time, user is able to import events to a work day calender
 - Upon clicking on save button, event is saved into local storage
 
 ## Screenshot of website
-<<<<<<< HEAD
-=======
 ![dayCelender-SC](https://user-images.githubusercontent.com/99520179/164570076-34c90a81-1aad-4ce0-a9ed-815dd70f503f.png)
->>>>>>> 2c24d9f8c35ce0ee5667b4a971d89522fef72f0b
 
 
 ## Links
 Website
--https://keeezy.github.io/05Third-PartyAPIs/
+- https://keeezy.github.io/05Third-PartyAPIs/
 Repository
--https://github.com/keeezy/05Third-PartyAPIs![Uploading dayCelender-SC.png…]()
+- https://github.com/keeezy/05Third-PartyAPIs
